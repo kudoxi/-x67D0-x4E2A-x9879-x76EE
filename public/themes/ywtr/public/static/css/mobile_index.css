@@ -1,0 +1,90 @@
+.navbar{
+	width: 100%;
+	height: 1.25rem;
+	padding:0.25rem;
+	overflow: hidden;
+	margin-bottom: 0;
+	box-shadow: 0 0 0.05rem #ccc;
+}
+.logo{
+	width: 3.0rem;
+	height: 100%;
+	color: white;
+	float: left;
+}
+.login{
+	width: 3.75rem;
+	height: 100%;
+	float: right;
+	display: flex;
+	justify-content: space-between;
+}
+.touxiang{
+	width: 0.75rem !important;
+	height: 0.75rem !important;
+	border-radius: 50%;
+}
+.logos{
+	width: 1.125rem;
+	height: 100%;
+}
+.logo span{
+	font-size: 0.55rem;
+	font-weight: bold;
+	color: black;
+	letter-spacing: 0.05rem;
+	position: relative;
+	top: 0.125rem;
+}
+.login a{
+	display: inline-block;
+	width: 33%;
+	height: 100%;
+	line-height: 0.75rem;
+	font-size: 0.4rem;
+	color: black;
+}
+.bg,.bg_a,.bg_b,.bg_c,.bg_d{
+	width: 100%;
+	height: 5.0rem;
+}
+.bg_e{
+	width: 100%;
+	min-height: 3.75rem;
+	text-align: center;
+	float: left;
+}
+.bg_e h4{
+	font-size: 0.45rem;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	margin-top: 1.0rem;
+	letter-spacing: 0.05rem;
+
+}
+.bg_e a{
+	display: inline-block;
+	width: 3.0rem;
+	height: 0.875rem;
+	background: #f2961f;
+	text-align: center;
+	line-height: 0.875rem;
+	font-size: 0.35rem;
+	font-weight: bold;
+	border-radius: 0.5rem;
+	color: white;
+	margin-top: 0.5rem;
+	text-decoration: none;
+}
+.footer{
+	clear: both;
+	width: 100%;
+	height: 3.0rem;
+}
+#computer{
+	display: none;
+}
+#mobilep{
+	display: block;
+}

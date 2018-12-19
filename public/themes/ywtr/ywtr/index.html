@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>index</title>
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/static/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/static/css/pc_index.css" media="screen and (min-width:1025px)">
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/static/css/flexible.css" media="screen and (max-width:1024px)">
+    <link rel="stylesheet" type="text/css" href="__TMPL__/public/static/css/mobile_index.css" media="screen and (max-width:1024px)">
+</head>
+<body>
+    <!--pc端-->
+    <div id="computer">
+        <!-- pc端代码开始 -->
+        <div class="pc">
+            <!-- 头部导航 -->
+            <nav class="navbar">
+                <div class="logo">
+                    <img class="logos" src="__TMPL__/public/static/images/LOGO.png">
+                    <span>小睿</span>
+                </div>
+                <div class="nav_right">
+                    <ul>
+                        <li style="width: 60px;">
+                            <a style="color: black;font-weight: bold;" href="#">首页</a>
+                        </li>
+                        <li style="width: 60px;">
+                            <a style="color: #808080" href="">产品</a>
+                        </li>
+                        <if condition="empty($user_id)">
+                            <li style="width: 60px;border: 1px solid #1da1f6;border-radius: 20px;">
+                                <a style="color: #1da1f6;" href="{:url('login/index')}">登录</a>
+                            </li>
+                            <li style="background: #1da1f6;border-radius: 20px;">
+                                <a style="color: white;" href="{:url('reg/index')}">免费注册</a>
+                            </li>
+                        <else />
+                            <li style="text-align: right;">
+                                <img style="width: 30px;height: 30px;" src="__TMPL__/public/static/images/small.png">
+                                <a style="color: #4db5ed;" href="{:url('my/personal')}">我的</a>
+                            </li>
+                        </if>
+                        
+                    </ul>
+                </div>
+            </nav>
+            <!-- 首页轮播 -->
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li style="margin:0 10px;" data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active" style="background: url('__TMPL__/public/static/images/banner.png') no-repeat center;background-size: cover;background-position: center"></div>
+                    <div class="item" style="background: url('__TMPL__/public/static/images/banner.png') no-repeat center;background-size: cover;background-position: center"></div>
+                    <div class="item" style="background: url('__TMPL__/public/static/images/banner.png') no-repeat center;background-size: cover;background-position: center"></div>
+                </div>
+            </div>
+
+            <!-- 内容1 -->
+            <div class="con_a">
+                <div class="box_a" style="background: url('__TMPL__/public/static/images/jianjie.png') no-repeat center;background-size: cover;background-position: center"></div>
+            </div>
+
+            <!-- 内容2 -->
+            <div class="con_b">
+                <div class="box_b" style="background: url('__TMPL__/public/static/images/gongneng.png') no-repeat center;background-size: cover;background-position: center"></div>
+            </div>
+
+            <!-- 内容3 -->
+            <div class="con_c">
+                <div class="box_c" style="background: url('__TMPL__/public/static/images/tedian.png') no-repeat center;background-size: cover;background-position: center"></div>
+            </div>
+
+            <!-- 内容4 -->
+            <div class="con_d">
+                <div class="box_d" style="background: url('__TMPL__/public/static/images/jiazhi.png') no-repeat center;background-size: cover;background-position: center"></div>
+            </div>
+            <!-- 底部 -->
+            <div class="footer_a" style="background: url('__TMPL__/public/static/images/start.png') no-repeat center;background-size: cover;background-position: center">
+                <h2>小睿在手&nbsp;&nbsp;&nbsp;&nbsp;智慧办公</h2>
+                <a href="{:url('my/personal')}">立即开启</a>
+            </div>
+            <div class="footer_b" style="background: url('__TMPL__/public/static/images/connect_us.png') no-repeat center;background-size: cover;background-position: center"></div>
+            <div class="footer_c">
+                <span>版权所有xxxxxxxxxxxxxxx</span>
+            </div>
+
+        </div>
+        <!-- pc端代码结束 -->
+    </div>
+    <!--移动端-->
+    <div id="mobilep">
+        <!-- 头部导航 -->
+        <nav class="navbar">
+            <div class="logo">
+                <img class="logos" src="__TMPL__/public/static/images/LOGO.png">
+                <span>小睿</span>
+            </div>
+            <div class="login">
+                <a href="#">首页</a>
+                <a href="#" style="color: #7d7c7c;">产品</a>
+                <a class="touxiang" style="background: url('__TMPL__/public/static/images/small.png') no-repeat center;background-size: cover;" href="#">
+
+                </a>
+            </div>
+        </nav>
+        <div class="bg">
+            <img style="width: 100%;height: 100%;" src="__TMPL__/public/static/images/mobile_banner.png">
+        </div>
+        <div class="bg_a">
+            <img style="width: 100%;height: 100%;" src="__TMPL__/public/static/images/mobile_jianjie.png">
+        </div>
+        <div class="bg_b">
+            <img style="width: 100%;height: 100%;" src="__TMPL__/public/static/images/mobile_gongneng.png">
+        </div>
+        <div class="bg_c">
+            <img style="width: 100%;height: 100%;" src="__TMPL__/public/static/images/mobile_tedian.png">
+        </div>
+        <div class="bg_d">
+            <img style="width: 100%;height: 100%;" src="__TMPL__/public/static/images/mobile_jiazhi.png">
+        </div>
+        <div class="bg_e" style="background: url('__TMPL__/public/static/images/mobile_start.png') no-repeat center;background-size: cover;background-position: center">
+            <h4>小睿在手&nbsp;智慧办公</h4>
+            <a href="{:url('my/personal')}">立即开启</a>
+        </div>
+        <div class="footer" style="background: url('__TMPL__/public/static/images/bottom.png') no-repeat center;background-size: cover;background-position: center">
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="__TMPL__/public/static/js/jquery-2.1.0.js"></script>
+    <script type="text/javascript" src="__TMPL__/public/static/js/flexible.js"></script>
+    <script type="text/javascript" src="__TMPL__/public/static/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+body{
+    background: #f4f4f4;
+}
+html , body , div.fullpage{
+    height: 100%;
+}
+.paypath{
+    padding:15px;
+    font-size: 16px;
+    color: #545750;
+    border-bottom: 1px solid #e6e6e6;
+}
+.zfb , .wx{
+    padding:0px 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    height: 64px;
+    line-height: 64px;
+    font-size: 16px;
+}
+.zfb i.icon-zfb , .wx i.icon-wx{
+    width: 38px;
+    height: 38px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+.zfb i.icon-zfb{
+    background: url("../images/icon-zfb.png") no-repeat center;
+    background-size: 80%;
+}
+.wx i.icon-wx{
+    background: url("../images/icon-wx.png") no-repeat center;
+    background-size: 80%;
+}
+.pay_info{
+    padding:15px;
+    font-size: 14px;
+}
+.pay_info .pay_price{
+    font-size: 22px;
+    color: #f19928;
+}
+.pay_check{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    position: fixed;
+    bottom: 0px;
+    background-color: #1da1f6;
+    color: #fff;
+    text-align: center;
+}
+i.check{
+    float: right;
+}
+input[type="radio"] + .check::before {
+    content: "\a0"; /*不换行空格*/
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #999999;
+}
+input[type="radio"]:checked + .check::before {
+    background-color: #f19928;
+    background-clip: content-box;
+    padding: .2em;
+}
+input[type="radio"] {
+    position: absolute;
+    right: 15px;
+    opacity: 0;
+}
+#computer{
+    display: none;
+}
+#mobilep{
+    display: block;
+}

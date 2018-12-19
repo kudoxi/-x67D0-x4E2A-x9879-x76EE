@@ -1,0 +1,3 @@
+[2018-01-11 14:36:36][debug] order:null
+[2018-01-11 14:38:07][debug] order:"http:\/\/t2.refineit.cn:97\/xiaorui\/public\/wxpay\/example\/notify.php"
+[2018-01-11 14:38:07][debug] jsApi:"{\"appId\":\"wxace91c55ce317972\",\"nonceStr\":\"5bfphxjrwaaoeqmhot7i1guhxw2s1rmw\",\"package\":\"prepay_id=wx20180111143807b84806c4d90316706760\",\"signType\":\"MD5\",\"timeStamp\":\"1515652687\",\"paySign\":\"4660E7B85E9352BBD2C1381E2EE51FA1\"}"
