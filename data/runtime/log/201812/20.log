@@ -1,0 +1,931 @@
+---------------------------------------------------------------
+[ 2018-12-20T14:50:43+08:00 ] ::1 ::1 GET /yiwantongren/public/admin/public/login.html
+[ info ] localhost/yiwantongren/public/admin/public/login.html [运行时间：1.232616s][吞吐率：0.81req/s] [内存消耗：765.99kb] [文件加载：71]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.107828s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/yiwantongren/public/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; hisiphp__language=zh-cn; PHPSESSID=6sl8ul0tom0vbogkes0v8tad52; admin_username=admin',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/ywtr\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.028918s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ D:\upupw\htdocs\yiwantongren\app\admin\controller\PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] themes/adminyw/admin\\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000980s ] mysql:dbname=yiwantongren;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_hook_plugin` [ RunTime:0.028808s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `yw_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000457s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_option` [ RunTime:0.021317s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000332s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000413s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000483s ]
+---------------------------------------------------------------
+[ 2018-12-20T14:50:43+08:00 ] ::1 ::1 GET /yiwantongren/public/captcha/new.html?height=32&width=150&font_size=18
+[ info ] localhost/yiwantongren/public/captcha/new.html?height=32&width=150&font_size=18 [运行时间：0.179826s][吞吐率：5.56req/s] [内存消耗：433.79kb] [文件加载：53]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.047448s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\cmf\\controller\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/yiwantongren/public/admin/public/login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'hisiphp__language=zh-cn; PHPSESSID=6sl8ul0tom0vbogkes0v8tad52; admin_username=admin',
+)
+[ info ] [ PARAM ] array (
+  'height' => '32',
+  'width' => '150',
+  'font_size' => '18',
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/ywtr\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.023887s ]
+[ info ] [ RUN ] cmf\controller\CaptchaController->index[ D:\upupw\htdocs\yiwantongren\simplewind\cmf\controller\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000866s ] mysql:dbname=yiwantongren;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_hook_plugin` [ RunTime:0.020039s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `yw_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000272s ]
+---------------------------------------------------------------
+[ 2018-12-20T14:51:40+08:00 ] ::1 ::1 GET /yiwantongren/public/admin/public/login.html
+[ info ] localhost/yiwantongren/public/admin/public/login.html [运行时间：1.066917s][吞吐率：0.94req/s] [内存消耗：765.98kb] [文件加载：71]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.061400s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/yiwantongren/public/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; hisiphp__language=zh-cn; PHPSESSID=6sl8ul0tom0vbogkes0v8tad52; admin_username=admin',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/ywtr\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.023078s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ D:\upupw\htdocs\yiwantongren\app\admin\controller\PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] themes/adminyw/admin\\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011726s ] mysql:dbname=yiwantongren;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_hook_plugin` [ RunTime:0.020282s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `yw_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000374s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_option` [ RunTime:0.014426s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000379s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000526s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000517s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000409s ]
+---------------------------------------------------------------
+[ 2018-12-20T14:51:41+08:00 ] ::1 ::1 GET /yiwantongren/public/captcha/new.html?height=32&width=150&font_size=18
+[ info ] localhost/yiwantongren/public/captcha/new.html?height=32&width=150&font_size=18 [运行时间：0.232685s][吞吐率：4.30req/s] [内存消耗：433.78kb] [文件加载：53]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.064549s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\cmf\\controller\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/yiwantongren/public/admin/public/login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'hisiphp__language=zh-cn; PHPSESSID=6sl8ul0tom0vbogkes0v8tad52; admin_username=admin',
+)
+[ info ] [ PARAM ] array (
+  'height' => '32',
+  'width' => '150',
+  'font_size' => '18',
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/ywtr\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.021466s ]
+[ info ] [ RUN ] cmf\controller\CaptchaController->index[ D:\upupw\htdocs\yiwantongren\simplewind\cmf\controller\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011907s ] mysql:dbname=yiwantongren;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_hook_plugin` [ RunTime:0.021965s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `yw_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000431s ]
+---------------------------------------------------------------
+[ 2018-12-20T14:51:46+08:00 ] ::1 ::1 GET /yiwantongren/public/admin/public/login.html
+[ info ] localhost/yiwantongren/public/admin/public/login.html [运行时间：0.988875s][吞吐率：1.01req/s] [内存消耗：765.31kb] [文件加载：71]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.062444s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; hisiphp__language=zh-cn; PHPSESSID=6sl8ul0tom0vbogkes0v8tad52; admin_username=admin',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/ywtr\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.022721s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ D:\upupw\htdocs\yiwantongren\app\admin\controller\PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] themes/adminyw/admin\\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011773s ] mysql:dbname=yiwantongren;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_hook_plugin` [ RunTime:0.019297s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `yw_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_option` [ RunTime:0.017571s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000286s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000277s ]
+---------------------------------------------------------------
+[ 2018-12-20T14:51:47+08:00 ] ::1 ::1 GET /yiwantongren/public/captcha/new.html?height=32&width=150&font_size=18
+[ info ] localhost/yiwantongren/public/captcha/new.html?height=32&width=150&font_size=18 [运行时间：0.236500s][吞吐率：4.23req/s] [内存消耗：433.78kb] [文件加载：53]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.058936s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\cmf\\controller\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/yiwantongren/public/admin/public/login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'hisiphp__language=zh-cn; PHPSESSID=6sl8ul0tom0vbogkes0v8tad52; admin_username=admin',
+)
+[ info ] [ PARAM ] array (
+  'height' => '32',
+  'width' => '150',
+  'font_size' => '18',
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/ywtr\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.019875s ]
+[ info ] [ RUN ] cmf\controller\CaptchaController->index[ D:\upupw\htdocs\yiwantongren\simplewind\cmf\controller\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000851s ] mysql:dbname=yiwantongren;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_hook_plugin` [ RunTime:0.024260s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `yw_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000375s ]
+---------------------------------------------------------------
+[ 2018-12-20T14:52:40+08:00 ] ::1 ::1 GET /yiwantongren/public/admin/public/login.html
+[ info ] localhost/yiwantongren/public/admin/public/login.html [运行时间：0.446481s][吞吐率：2.24req/s] [内存消耗：566.20kb] [文件加载：70]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.055225s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, application/xhtml+xml, image/jxr, */*',
+  'accept-language' => 'zh-CN',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/ywtr\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.020296s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ D:\upupw\htdocs\yiwantongren\app\admin\controller\PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011384s ] mysql:dbname=yiwantongren;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_hook_plugin` [ RunTime:0.014830s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `yw_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_option` [ RunTime:0.011599s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000321s ]
+---------------------------------------------------------------
+[ 2018-12-20T14:52:43+08:00 ] ::1 ::1 GET /yiwantongren/public/admin
+[ info ] localhost/yiwantongren/public/admin [运行时间：0.240474s][吞吐率：4.16req/s] [内存消耗：533.76kb] [文件加载：68]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.041443s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, application/xhtml+xml, image/jxr, */*',
+  'referer' => 'http://localhost/yiwantongren/public/admin/public/login.html',
+  'accept-language' => 'zh-CN',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost',
+  'connection' => 'Keep-Alive',
+  'cookie' => 'PHPSESSID=8fs8p10aao7b1leo310vpvjk37',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/ywtr\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.022560s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\admin.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/user\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../data/lang/zh-cn/admin_menu.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\AdminLangBehavior @admin_init [ RunTime:0.028998s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000879s ] mysql:dbname=yiwantongren;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_hook_plugin` [ RunTime:0.014765s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `yw_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000317s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_option` [ RunTime:0.011563s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000340s ]
+---------------------------------------------------------------
+[ 2018-12-20T14:52:44+08:00 ] ::1 ::1 GET /yiwantongren/public/admin/public/login.html
+[ info ] localhost/yiwantongren/public/admin/public/login.html [运行时间：0.952372s][吞吐率：1.05req/s] [内存消耗：764.24kb] [文件加载：71]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.052191s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, application/xhtml+xml, image/jxr, */*',
+  'referer' => 'http://localhost/yiwantongren/public/admin/public/login.html',
+  'accept-language' => 'zh-CN',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost',
+  'connection' => 'Keep-Alive',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=8fs8p10aao7b1leo310vpvjk37',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/ywtr\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.020159s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ D:\upupw\htdocs\yiwantongren\app\admin\controller\PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] themes/adminyw/admin\\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010854s ] mysql:dbname=yiwantongren;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_hook_plugin` [ RunTime:0.015248s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `yw_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_option` [ RunTime:0.007370s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000265s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000361s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000343s ]
+---------------------------------------------------------------
+[ 2018-12-20T14:52:44+08:00 ] ::1 ::1 GET /yiwantongren/public/captcha/new.html?height=32&width=150&font_size=18
+[ info ] localhost/yiwantongren/public/captcha/new.html?height=32&width=150&font_size=18 [运行时间：0.186349s][吞吐率：5.37req/s] [内存消耗：433.15kb] [文件加载：53]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.044065s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\cmf\\controller\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'image/png, image/svg+xml, image/jxr, image/*;q=0.8, */*;q=0.5',
+  'referer' => 'http://localhost/yiwantongren/public/admin/public/login.html',
+  'accept-language' => 'zh-CN',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost',
+  'connection' => 'Keep-Alive',
+  'cookie' => 'PHPSESSID=8fs8p10aao7b1leo310vpvjk37',
+)
+[ info ] [ PARAM ] array (
+  'height' => '32',
+  'width' => '150',
+  'font_size' => '18',
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/ywtr\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.023532s ]
+[ info ] [ RUN ] cmf\controller\CaptchaController->index[ D:\upupw\htdocs\yiwantongren\simplewind\cmf\controller\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000915s ] mysql:dbname=yiwantongren;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_hook_plugin` [ RunTime:0.016145s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `yw_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000273s ]
+---------------------------------------------------------------
+[ 2018-12-20T15:26:09+08:00 ] ::1 ::1 GET /yiwantongren/public/admin/public/login.html
+[ info ] localhost/yiwantongren/public/admin/public/login.html [运行时间：0.983922s][吞吐率：1.02req/s] [内存消耗：765.31kb] [文件加载：71]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.044953s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; hisiphp__language=zh-cn; PHPSESSID=6sl8ul0tom0vbogkes0v8tad52; admin_username=admin',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/ywtr\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.021665s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ D:\upupw\htdocs\yiwantongren\app\admin\controller\PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] themes/adminyw/admin\\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001362s ] mysql:dbname=yiwantongren;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_hook_plugin` [ RunTime:0.016078s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `yw_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000412s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_option` [ RunTime:0.015702s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000371s ]
+---------------------------------------------------------------
+[ 2018-12-20T15:26:10+08:00 ] ::1 ::1 GET /yiwantongren/public/captcha/new.html?height=32&width=150&font_size=18
+[ info ] localhost/yiwantongren/public/captcha/new.html?height=32&width=150&font_size=18 [运行时间：0.192961s][吞吐率：5.18req/s] [内存消耗：433.80kb] [文件加载：53]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.053935s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\cmf\\controller\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/yiwantongren/public/admin/public/login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'hisiphp__language=zh-cn; PHPSESSID=6sl8ul0tom0vbogkes0v8tad52; admin_username=admin',
+)
+[ info ] [ PARAM ] array (
+  'height' => '32',
+  'width' => '150',
+  'font_size' => '18',
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/ywtr\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.028430s ]
+[ info ] [ RUN ] cmf\controller\CaptchaController->index[ D:\upupw\htdocs\yiwantongren\simplewind\cmf\controller\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000846s ] mysql:dbname=yiwantongren;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_hook_plugin` [ RunTime:0.021359s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `yw_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000331s ]
+---------------------------------------------------------------
+[ 2018-12-20T15:26:13+08:00 ] ::1 ::1 GET /yiwantongren/public/admin/public/login.html
+[ info ] localhost/yiwantongren/public/admin/public/login.html [运行时间：1.141385s][吞吐率：0.88req/s] [内存消耗：765.61kb] [文件加载：71]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.061091s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; hisiphp__language=zh-cn; PHPSESSID=6sl8ul0tom0vbogkes0v8tad52; admin_username=admin',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/ywtr\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.021770s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ D:\upupw\htdocs\yiwantongren\app\admin\controller\PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] themes/adminyw/admin\\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011691s ] mysql:dbname=yiwantongren;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_hook_plugin` [ RunTime:0.021635s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `yw_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_option` [ RunTime:0.015687s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000270s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000241s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000355s ]
+---------------------------------------------------------------
+[ 2018-12-20T15:26:13+08:00 ] ::1 ::1 GET /yiwantongren/public/captcha/new.html?height=32&width=150&font_size=18
+[ info ] localhost/yiwantongren/public/captcha/new.html?height=32&width=150&font_size=18 [运行时间：0.179643s][吞吐率：5.57req/s] [内存消耗：433.78kb] [文件加载：53]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.049915s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\cmf\\controller\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/yiwantongren/public/admin/public/login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'hisiphp__language=zh-cn; PHPSESSID=6sl8ul0tom0vbogkes0v8tad52; admin_username=admin',
+)
+[ info ] [ PARAM ] array (
+  'height' => '32',
+  'width' => '150',
+  'font_size' => '18',
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/ywtr\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.020513s ]
+[ info ] [ RUN ] cmf\controller\CaptchaController->index[ D:\upupw\htdocs\yiwantongren\simplewind\cmf\controller\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000881s ] mysql:dbname=yiwantongren;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_hook_plugin` [ RunTime:0.020837s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `yw_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000411s ]
+---------------------------------------------------------------
+[ 2018-12-20T15:26:21+08:00 ] ::1 ::1 GET /yiwantongren/public/admin/public/login.html
+[ info ] localhost/yiwantongren/public/admin/public/login.html [运行时间：0.368240s][吞吐率：2.72req/s] [内存消耗：566.20kb] [文件加载：70]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.050866s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, application/xhtml+xml, image/jxr, */*',
+  'accept-language' => 'zh-CN',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost',
+  'connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/ywtr\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.021413s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ D:\upupw\htdocs\yiwantongren\app\admin\controller\PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001155s ] mysql:dbname=yiwantongren;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_hook_plugin` [ RunTime:0.020409s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `yw_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000451s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_option` [ RunTime:0.016220s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000361s ]
+---------------------------------------------------------------
+[ 2018-12-20T15:26:25+08:00 ] ::1 ::1 GET /yiwantongren/public/admin
+[ info ] localhost/yiwantongren/public/admin [运行时间：0.284937s][吞吐率：3.51req/s] [内存消耗：533.76kb] [文件加载：68]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.057559s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, application/xhtml+xml, image/jxr, */*',
+  'referer' => 'http://localhost/yiwantongren/public/admin/public/login.html',
+  'accept-language' => 'zh-CN',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost',
+  'connection' => 'Keep-Alive',
+  'cookie' => 'PHPSESSID=vao2edav6f0glv45lp3pafj220',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/ywtr\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.024720s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\admin.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/user\lang\zh-cn\admin_menu.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../data/lang/zh-cn/admin_menu.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\AdminLangBehavior @admin_init [ RunTime:0.031259s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001443s ] mysql:dbname=yiwantongren;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_hook_plugin` [ RunTime:0.022533s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `yw_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000364s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_option` [ RunTime:0.015141s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000380s ]
+---------------------------------------------------------------
+[ 2018-12-20T15:26:26+08:00 ] ::1 ::1 GET /yiwantongren/public/admin/public/login.html
+[ info ] localhost/yiwantongren/public/admin/public/login.html [运行时间：1.095618s][吞吐率：0.91req/s] [内存消耗：764.23kb] [文件加载：71]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.045880s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'text/html, application/xhtml+xml, image/jxr, */*',
+  'referer' => 'http://localhost/yiwantongren/public/admin/public/login.html',
+  'accept-language' => 'zh-CN',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost',
+  'connection' => 'Keep-Alive',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=vao2edav6f0glv45lp3pafj220',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/ywtr\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.024585s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ D:\upupw\htdocs\yiwantongren\app\admin\controller\PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] themes/adminyw/admin\\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001064s ] mysql:dbname=yiwantongren;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_hook_plugin` [ RunTime:0.015268s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `yw_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_option` [ RunTime:0.007830s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000375s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `yw_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000366s ]
+---------------------------------------------------------------
+[ 2018-12-20T15:26:26+08:00 ] ::1 ::1 GET /yiwantongren/public/captcha/new.html?height=32&width=150&font_size=18
+[ info ] localhost/yiwantongren/public/captcha/new.html?height=32&width=150&font_size=18 [运行时间：0.204131s][吞吐率：4.90req/s] [内存消耗：433.16kb] [文件加载：53]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.067776s ]
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\simplewind\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\cmf\\controller\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => 'image/png, image/svg+xml, image/jxr, image/*;q=0.8, */*;q=0.5',
+  'referer' => 'http://localhost/yiwantongren/public/admin/public/login.html',
+  'accept-language' => 'zh-CN',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'localhost',
+  'connection' => 'Keep-Alive',
+  'cookie' => 'PHPSESSID=vao2edav6f0glv45lp3pafj220',
+)
+[ info ] [ PARAM ] array (
+  'height' => '32',
+  'width' => '150',
+  'font_size' => '18',
+)
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../simplewind/cmf/lang\zh-cn.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/admin\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/portal\lang\zh-cn\common.php
+[ info ] [ LANG ] D:\upupw\htdocs\yiwantongren\public/../app/ywtr\lang\zh-cn\common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.025903s ]
+[ info ] [ RUN ] cmf\controller\CaptchaController->index[ D:\upupw\htdocs\yiwantongren\simplewind\cmf\controller\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000989s ] mysql:dbname=yiwantongren;host=localhost;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yw_hook_plugin` [ RunTime:0.035188s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `yw_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000330s ]
