@@ -40,6 +40,7 @@
 						<td>{$vo.listorder}</td>
 						<td>{$vo.remark}</td>
 						<td>
+							<a href="javascript:open_detail('{$vo.id}')">详情</a>
 							<a href="{:url('adminyw/type/edit',['id'=>$vo['id']])}">编辑</a>
 							<a class="js-ajax-delete" href="{:url('adminyw/type/delete',['id'=>$vo['id']])}">删除</a>
 						</td>
@@ -52,9 +53,9 @@
 	<script src="__STATIC__/js/admin.js"></script>
 	<script>
 		function open_detail(id) {
-			//var url = "{:U('adminyw/play/detail',array('id'=>'DETAILID'))}";
-			//url = url.replace('DETAILID', id);
-			//open_iframe_dialog(url, '剧目详情');
+			var url = "{:url('adminyw/play/detail',array('id'=>'DETAILID'))}";
+			url = url.replace('DETAILID', id);
+			openIframeDialog(url, '剧目详情');
 		}
 	</script>
 </body>
