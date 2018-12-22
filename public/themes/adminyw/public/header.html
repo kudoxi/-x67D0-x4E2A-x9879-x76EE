@@ -16,6 +16,7 @@
     <link href="__TMPL__/public/assets/themes/{:cmf_get_admin_style()}/bootstrap.min.css" rel="stylesheet">
     <link href="__TMPL__/public/assets/simpleboot3/css/simplebootadmin.css" rel="stylesheet">
     <link href="__STATIC__/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="__TMPL__/public/assets/simpleboot3/css/bootstrap-select.min.css" rel="stylesheet"/>
     <style>
         form .input-order {
             margin-bottom: 0px;
@@ -41,6 +42,7 @@
         .form-required {
             color: red;
         }
+        
     </style>
     <script type="text/javascript">
         //全局变量
@@ -51,9 +53,12 @@
             APP: '{$Request.module}'/*当前应用名*/
         };
     </script>
+    <script src="__TMPL__/public/assets/js/jquery.js"></script>
     <script src="__TMPL__/public/assets/js/jquery-1.10.2.min.js"></script>
     <script src="__STATIC__/js/wind.js"></script>
     <script src="__TMPL__/public/assets/js/bootstrap.min.js"></script>
+    <script src="__TMPL__/public/assets/js/bootstrap-select.min.js"></script>
+    <script src="__TMPL__/public/assets/js/defaults-zh_CN.js"></script>
     <script>
         Wind.css('artDialog');
         Wind.css('layer');
@@ -73,3 +78,16 @@
             }
         </style>
     </if>
+    <style>
+		.bootstrap-select .dropdown-toggle:focus{outline: none !important;}
+		.bs-searchbox .form-control{width: 120px;}
+		.form-search select{height:34px;}
+	</style>
+	<script>
+		$(function() {
+			$('.selectpicker').selectpicker({
+				"title":"请选择",
+			});
+		});
+	</script>
+    <script src="__TMPL__/public/assets/js/selectpicker.js"></script>

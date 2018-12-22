@@ -118,6 +118,7 @@ return array (
   'ADMIN_USER_INDEX' => '管理员',
   'ADMIN_USER_USERINFO' => '个人信息',
   'ADMIN_USER_USERINFOPOST' => '管理员个人信息修改提交',
+  'ADMINYW_COUNTRY_INDEX' => '国家语种管理',
   'ADMINYW_PLAY_INDEX' => '剧目管理',
   'ADMINYW_RECORD_INDEX' => '操作记录',
   'ADMINYW_TYPE_INDEX' => '剧种分类管理',

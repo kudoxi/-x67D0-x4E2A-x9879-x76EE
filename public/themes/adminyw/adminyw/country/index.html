@@ -1,0 +1,58 @@
+<include file="public@header" />
+
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('adminyw/country/index')}">国家语种列表</a></li>
+			<li><a href="{:url('adminyw/country/add')}">国家语种添加</a></li>
+		</ul>
+		<form class="well form-inline margin-top-20" method="post" action="{:url('country/index')}">
+			国家名称
+			<input type="text" class="form-control" name="name" style="width: 120px;" value="{:input('request.name/s','')}" placeholder="国家名称">
+			语种名称
+			<input type="text" class="form-control" name="language" style="width: 120px;" value="{:input('request.language/s','')}" placeholder="语种名称">
+			所属国家
+			<!--<select class="form-control" name="pid" style="width: 120px;" value="{:input('request.pid/s','')}">
+				<option value="0">请选择</option>
+				
+			</select>-->
+			<select name="pid" style="width:120px;" class="selectpicker" select_target="{:url('adminyw/select/country')}" select_default="{:input('request.pid/s','')}" data-live-search="true"></select>
+			
+			<input type="submit" class="btn btn-primary" value="搜索" />
+			<a class="btn btn-danger" href="{:url('country/index')}">清空</a>
+		</form>
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th width="50">ID</th>
+					<th>国家名称</th>
+					<th>语种名称</th>
+					<th>父级</th>
+					<th>排序</th>
+					<th>备注</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="list" item="vo">
+					<tr>
+						<td>{$vo.id}</td>
+						<td>{$vo.name}</td>
+						<td>{$vo.language}</td>
+						<td>{$vo.pname}</td>
+						<td>{$vo.listorder}</td>
+						<td>{$vo.remark}</td>
+						<td>
+							<a href="{:url('adminyw/country/edit',['id'=>$vo['id']])}">编辑</a>
+							<a class="js-ajax-delete" href="{:url('adminyw/country/delete',['id'=>$vo['id']])}">删除</a>
+						</td>
+					</tr>
+				</foreach>
+			</tbody>
+		</table>
+		<div class="pagination">{$list->render()}</div>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<include file="public@header"/>
+	</head>
+	<body>
+		<div class="wrap js-check-wrap">
+	    <ul class="nav nav-tabs">
+			<li><a href="{:url('adminyw/country/index')}">国家语种列表</a></li>
+			<li><a href="{:url('adminyw/country/add')}">国家语种添加</a></li>
+			<li class="active"><a href="{:url('adminyw/country/edit')}">国家语种编辑</a></li>
+		</ul>
+    <div class="row margin-top-20">
+
+        <div class="col-md-6">
+            <form class="js-ajax-form" action="{:url('country/save_edit')}" method="post">
+                <div class="tab-content">
+						<div class="tab-pane active">
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>国家名称</label>
+								<div>
+									<input type="text" class="form-control" id="input-name" name="name" maxlength="30" required value="{$value.name}">
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>语种名称</label>
+								<div>
+									<input type="text" class="form-control" id="input-language" name="language" maxlength="30" required value="{$value.language}">
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name">所属国家</label>
+								<div>
+									<select name="pid" class="selectpicker" select_target="{:url('adminyw/select/country')}" select_default="{$value.pid}" data-live-search="true"></select>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="input-name">排序</label>
+								<div>
+									<input type="number" class="form-control" id="input-listorder" name="listorder" maxlength="10"  value="{$value.listorder}">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label>备注</label>
+								<div>
+									<textarea class="form-control" name="remark" maxlength="250" placeholder="最多250个字符">{$value.remark}</textarea>
+								</div>
+							</div>
+
+						</div>
+					</div>
+                <div class="form-group">
+                    <input type="hidden" name="id" value="{$value.id}">
+                    <button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+                    <a class="btn btn-default" href="{:url('country/index')}">{:lang('BACK')}</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="__STATIC__/js/admin.js"></script>
+	</body>
+</html>

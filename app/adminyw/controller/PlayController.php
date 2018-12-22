@@ -51,7 +51,7 @@ class PlayController extends AdminBaseController{
 		
 		//获取分类select option 项
 		$TypeModel = new TypeModel();
-		$selectType = $TypeModel->typeselect();
+		$selectType = $TypeModel->typeselect(isset($search['type_id'])?$search['type_id']:"");
 		
         $this->assign('list',$play);
         $this->assign('selectType',$selectType);
@@ -63,9 +63,9 @@ class PlayController extends AdminBaseController{
     protected function searchData($search)
     {
         $where = [];
-        isset($search['name'])&&!empty($search['name'])? $where['name'] = ['like',"%$search[name]%"] : '';
-        isset($search['type_id'])&&!empty($search['type_id'])? $where['type_id'] = ['=',"$search[type_id]"] : '';
-        isset($search['description'])&&!empty($search['description'])? $where['description'] = ['like',"%$search[name]%"] : '';
+        isset($search['name'])&&!empty($search['name'])? $where['p.name'] = ['like',"%$search[name]%"] : '';
+        isset($search['type_id'])&&!empty($search['type_id'])? $where['p.type_id'] = ['=',"$search[type_id]"] : '';
+        isset($search['description'])&&!empty($search['description'])? $where['p.description'] = ['like',"%$search[name]%"] : '';
         $where['p.is_deleted'] = 0;
         return $where;
     }
