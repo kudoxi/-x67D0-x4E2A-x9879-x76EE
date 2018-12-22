@@ -1,0 +1,50 @@
+<include file="public@header" />
+</head>
+
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('adminyw/type/index')}">剧种分类列表</a></li>
+			<li class="active"><a href="{:url('adminyw/type/add')}">剧种分类添加</a></li>
+		</ul>
+		<div class="row margin-top-20">
+
+			<div class="col-md-6">
+				<form class="js-ajax-form" action="{:url('type/save_add')}" method="post">
+					<div class="tab-content">
+						<div class="tab-pane active">
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>剧种分类名称</label>
+								<div>
+									<input type="text" class="form-control" id="input-name" name="name" maxlength="30" required>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="input-name">排序</label>
+								<div>
+									<input type="number" class="form-control" id="input-listorder" name="listorder" value="0" maxlength="10">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label>备注</label>
+								<div>
+									<textarea class="form-control" name="remark" maxlength="250" placeholder="最多250个字符"></textarea>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+						<a class="btn btn-default" href="{:url('type/index')}">{:lang('BACK')}</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="__STATIC__/js/admin.js"></script>
+</body>
+
+</html>

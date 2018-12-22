@@ -1,0 +1,51 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('Record/index')}">操作列表</a></li>
+		</ul>
+        <form class="well form-inline margin-top-20" method="post" action="{:url('Record/index')}">
+			模块:
+			<select class="form-control" name="table">
+				<option value="">请选择</option>
+				<foreach name="$mudle" item="vo" key="k">
+					<option <if condition="input('request.table/s','') eq $k">selected</if> value="{$k}">{$vo}</option>
+				</foreach>
+			</select>
+			操作日期:
+			<input type="text" class="form-control js-date" name="s_time" style="width: 120px;" value="{:input('request.s_time/s','')}" placeholder="操作日期">
+			-
+			<input type="text" class="form-control js-date" name="e_time" style="width: 120px;" value="{:input('request.e_time/s','')}" placeholder="操作日期">
+			<input type="submit" class="btn btn-primary" value="搜索" />
+			<a class="btn btn-danger" href="{:url('Record/index')}">清空</a>
+        </form>
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th width="50">ID</th>
+					<th>模块</th>
+					<th>内容</th>
+					<th>更新前</th>
+					<th>更新后</th>
+					<th>日期</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="list" item="vo">
+					<tr>
+						<td>{$vo.id}</td>
+						<td>{$mudle[$vo.object]}</td>
+						<td>{$vo.remark}</td>
+						<td>{$vo.update_before}</td>
+						<td>{$vo.update_after}</td>
+						<td>{$vo.c_time}</td>
+					</tr>
+				</foreach>
+			</tbody>
+		</table>
+		<div class="pagination">{$list->render()}</div>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

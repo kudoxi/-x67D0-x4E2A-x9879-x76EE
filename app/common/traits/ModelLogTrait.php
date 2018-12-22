@@ -1,6 +1,6 @@
 <?php
 namespace app\common\traits;
-use app\common\models\JiluModel;
+use app\adminyw\model\JiluModel;
 
 trait ModelLogTrait
 {

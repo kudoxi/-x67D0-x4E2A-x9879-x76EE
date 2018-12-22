@@ -7,7 +7,7 @@ use app\common\traits\ModelLogTrait;
 class UserModel extends Model
 {
 
-    protected $table = "rf_users";
+    protected $table = "yw_f_user";
 
     use ModelLogTrait;
 
