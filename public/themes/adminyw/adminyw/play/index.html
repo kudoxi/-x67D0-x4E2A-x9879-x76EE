@@ -3,9 +3,7 @@
 <body>
 	<div class="wrap js-check-wrap">
 		<ul class="nav nav-tabs">
-			<li class="active">
-				<a href="{:url('adminyw/play/index')}">剧目列表</a>
-			</li>
+			<li class="active"><a href="{:url('adminyw/play/index')}">剧目列表</a></li>
 			<li><a href="{:url('adminyw/play/add')}">剧目添加</a></li>
 		</ul>
 		<form class="well form-inline margin-top-20" method="post" action="{:url('play/index')}">
@@ -27,7 +25,6 @@
 					<th width="50">ID</th>
 					<th>剧目名称</th>
 					<th>剧种分类</th>
-					<th>排序</th>
 					<th>备注</th>
 					<th>操作</th>
 				</tr>
@@ -37,12 +34,12 @@
 					<tr>
 						<td>{$vo.id}</td>
 						<td>{$vo.name}</td>
-						<td>{$vo.listorder}</td>
-						<td>{$vo.remark}</td>
+						<td>{$vo.tname}</td>
+						<td>{$vo.description}</td>
 						<td>
 							<a href="javascript:open_detail('{$vo.id}')">详情</a>
-							<a href="{:url('adminyw/type/edit',['id'=>$vo['id']])}">编辑</a>
-							<a class="js-ajax-delete" href="{:url('adminyw/type/delete',['id'=>$vo['id']])}">删除</a>
+							<a href="{:url('adminyw/play/edit',['id'=>$vo['id']])}">编辑</a>
+							<a class="js-ajax-delete" href="{:url('adminyw/play/delete',['id'=>$vo['id']])}">删除</a>
 						</td>
 					</tr>
 				</foreach>

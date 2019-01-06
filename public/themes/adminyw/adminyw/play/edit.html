@@ -1,0 +1,272 @@
+<include file="public@header" />
+<style>
+	.input_selector_div{
+	    padding-top: 20px;	
+	    position: relative;
+
+	}
+	.input_selector-preview{
+		width: 100px;
+		height: 100px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	    display: inline-block;
+	}
+	.input_selector-delete{
+		position: absolute;
+		top: 60px;
+		left: 120px;
+	}
+</style>
+</head>
+
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('adminyw/play/index')}">剧目列表</a></li>
+			<li><a href="{:url('adminyw/play/add')}">剧目添加</a></li>
+			<li class="active"><a href="{:url('adminyw/play/edit',array('id'=>$value.id))}">剧目编辑</a></li>
+		</ul>
+		<div class="row margin-top-20">
+
+			<div class="col-md-6">
+				<form class="js-ajax-form" action="{:url('play/save_edit')}" method="post">
+					<div class="tab-content">
+						<div class="tab-pane active">
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>剧目名称</label>
+								<div>
+									<input type="text" class="form-control" id="input-name" name="name" value="{$value.name}" maxlength="30" required placeholder="花吻...">
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>剧种分类</label>
+								<div>
+									<select class="form-control" id="type_id" name="type_id" required>
+										<option value="0">请选择</option>
+										{$selectType}
+									</select>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>国家和语种</label>
+								<div>
+									<input class="form-control" type="text" value="{$countrynames}" placeholder="请选择国家和语种" onclick="doSelectCountry();" id="js-country-name-input" required readonly/>
+		                            <input class="form-control" type="hidden" value="{$countryids}" name="country" id="js-country-id-input"/>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>标签</label>
+								<div>
+									<input class="form-control" type="text" value="{$tagnames}" placeholder="请选择标签" onclick="doSelectTag();" id="js-tag-name-input" required readonly/>
+		                            <input class="form-control" type="hidden" value="{$tagids}" name="tag" id="js-tag-id-input"/>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>贡献人员</label>
+								<div>
+									<input class="form-control" type="text" value="{$translatornames}" placeholder="请选择贡献人员" onclick="doSelectTran();" id="js-tran-name-input" required readonly/>
+		                            <input class="form-control" type="hidden" value="{$translatorids}" name="translator" id="js-tran-id-input"/>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>封面图</label>
+								<div>
+									<button type="button" class="btn btn-info uploadBtn" onclick="uploadOneImage2('上传一张封面图','.input_selector','','adminyw');">上传图片</button>
+									<input type="hidden" class="input_selector" id="input-cover_img" name="cover_img" value="{$value.cover_img}" required/>
+								</div>
+								<div class="input_selector_div">
+									<div class="input_selector-preview" style="background-image:url('{$value.cover_img}')"></div>
+		        					<button type="button" class="btn btn-sm btn-danger input_selector-delete" onclick="delete_img('.input_selector');"><i class="fa fa-trash-o"></i></button>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>剧目描述</label>
+								<div>
+									<textarea class="form-control" id="input-remark" name="description" maxlength="250" placeholder="最多250个字符">{$value.description}</textarea>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>剧目内容</label>
+								<div>
+									<script type="text/plain" id="input-content" name="content">{$value.content}</script>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>是否要求登陆可见</label>
+								<div>
+									<select class="form-control" id="input-is_login" name="is_login" required>
+										<option value="0"<if condition="$value.is_login eq '0'">selected</if>>否</option>
+										<option value="1"<if condition="$value.is_login eq '1'">selected</if>>是</option>
+									</select>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>是否显示</label>
+								<div>
+									<select class="form-control" id="input-is_show" name="is_show" required>
+										<option value="1"<if condition="$value.is_show eq '1'">selected</if>>是</option>
+										<option value="0"<if condition="$value.is_show eq '0'">selected</if>>否</option>
+									</select>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>是否置顶</label>
+								<div>
+									<select class="form-control" id="input-is_top" name="is_top" required>
+										<option value="0"<if condition="$value.is_top eq '0'">selected</if>>否</option>
+										<option value="1"<if condition="$value.is_top eq '1'">selected</if>>是</option>
+									</select>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>是否在首页轮播</label>
+								<div>
+									<select class="form-control" id="input-is_lunbo" name="is_lunbo" required>
+										<option value="0"<if condition="$value.is_lunbo eq '0'">selected</if>>否</option>
+										<option value="1"<if condition="$value.is_lunbo eq '1'">selected</if>>是</option>
+									</select>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name">排序</label>
+								<div>
+									<input type="number" class="form-control" id="input-listorder" name="listorder" value="{$value.listorder}" maxlength="10">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+                    	<input type="hidden" name="id" value="{$value.id}">
+						<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('EDIT')}</button>
+						<a class="btn btn-default" href="{:url('play/index')}">{:lang('BACK')}</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="__STATIC__/js/admin.js"></script>
+	<script type="text/javascript">
+	    //编辑器路径定义
+	    var editorURL = GV.JS_ROOT;
+	    window.UEDITOR_HOME_URL = "__STATIC__/js/ueditor/";
+	</script>
+	<script type="text/javascript" src="__STATIC__/js/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" src="__STATIC__/js/ueditor/ueditor.all.min.js"></script>
+	<script>
+		//上传封面图
+		function uploadOneImage2(dialog_title, input_selector, extra_params, app) {
+		    openUploadDialog(dialog_title, function (dialog, files) {
+		        $(input_selector).val(files[0].preview_url);
+		        var imgdiv = '<div class="input_selector-preview" style="background-image:url(\''+files[0].preview_url+'\')"></div>'+
+		        '<button type="button" class="btn btn-sm btn-danger input_selector-delete" onclick="delete_img(\''+input_selector+'\');"><i class="fa fa-trash-o"></i></button>';
+		        $(input_selector+"_div").empty();
+		        $(input_selector+"_div").append(imgdiv);
+		    }, extra_params, 0, 'image', app);
+		}
+		//删除封面图
+		function delete_img(input_selector){
+			$(input_selector).val('');
+			$(input_selector+"_div").empty();
+		}
+		$(function () {
+			//富文本
+	        editorcontent = new baidu.editor.ui.Editor();
+	        editorcontent.render('input-content');
+	        try {
+	            editorcontent.sync();
+	        } catch (err) {
+	        	
+	        }
+	    });
+	    
+	    //选择国家
+	    function doSelectCountry() {
+	        var selectedCountrysId = $('#js-country-id-input').val();
+	        var currurl = "{:url('adminyw/country/select',array('ids'=>'__ID__'))}";
+	        currurl = currurl.replace("__ID__",selectedCountrysId);
+	        openIframeLayer(currurl, '请选择国家和语种', {
+	            area: ['700px', '400px'],
+	            btn: ['确定', '取消'],
+	            yes: function (index, layero) {
+	                //do something
+	
+	                var iframeWin          = window[layero.find('iframe')[0]['name']];
+	                var selectedCountrys = iframeWin.confirm();
+	                if (selectedCountrys.selectedCountrysId.length == 0) {
+	                    layer.msg('请选择国家和语种');
+	                    return;
+	                }
+	                $('#js-country-id-input').val(selectedCountrys.selectedCountrysId.join(','));
+	                $('#js-country-name-input').val(selectedCountrys.selectedCountryName.join(' '));
+	                //console.log(layer.getFrameIndex(index));
+	                layer.close(index); //如果设定了yes回调，需进行手工关闭
+	            }
+	        });
+	    }
+	    
+	    //选择标签
+	    function doSelectTag() {
+	        var selectedTagsId = $('#js-tag-id-input').val();
+	        var currurl = "{:url('adminyw/tag/select',array('ids'=>'__ID__'))}";
+	        currurl = currurl.replace("__ID__",selectedTagsId);
+	        openIframeLayer(currurl, '请选择标签', {
+	            area: ['700px', '400px'],
+	            btn: ['确定', '取消'],
+	            yes: function (index, layero) {
+	                //do something
+	
+	                var iframeWin          = window[layero.find('iframe')[0]['name']];
+	                var selectedTags = iframeWin.confirm();
+	                if (selectedTags.selectedTagsId.length == 0) {
+	                    layer.msg('请选择标签');
+	                    return;
+	                }
+	                $('#js-tag-id-input').val(selectedTags.selectedTagsId.join(','));
+	                $('#js-tag-name-input').val(selectedTags.selectedTagsName.join(' '));
+	                //console.log(layer.getFrameIndex(index));
+	                layer.close(index); //如果设定了yes回调，需进行手工关闭
+	            }
+	        });
+	    }
+	    //选择贡献人员人员
+	    function doSelectTran() {
+	        var selectedTransId = $('#js-tran-id-input').val();
+	        var currurl = "{:url('adminyw/translator/select',array('ids'=>'__ID__'))}";
+	        currurl = currurl.replace("__ID__",selectedTransId);
+	        openIframeLayer(currurl, '请选择贡献人员', {
+	            area: ['700px', '400px'],
+	            btn: ['确定', '取消'],
+	            yes: function (index, layero) {
+	                //do something
+	
+	                var iframeWin          = window[layero.find('iframe')[0]['name']];
+	                var selectedTrans = iframeWin.confirm();
+	                if (selectedTrans.selectedTransId.length == 0) {
+	                    layer.msg('请选择贡献人员');
+	                    return;
+	                }
+	                $('#js-tran-id-input').val(selectedTrans.selectedTransId.join(','));
+	                $('#js-tran-name-input').val(selectedTrans.selectedTransName.join(' '));
+	                //console.log(layer.getFrameIndex(index));
+	                layer.close(index); //如果设定了yes回调，需进行手工关闭
+	            }
+	        });
+	    }
+	</script>
+</body>
+
+</html>

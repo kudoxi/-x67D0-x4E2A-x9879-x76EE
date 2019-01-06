@@ -1,0 +1,131 @@
+<include file="public@header" />
+<style>
+	.input_selector_div{
+	    padding-top: 20px;	
+	    position: relative;
+
+	}
+	.input_selector-preview{
+		width: 200px;
+		height: 200px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	    display: inline-block;
+	}
+	.input_selector-delete{
+		position: absolute;
+		top: 60px;
+		left: 120px;
+	}
+</style>
+</head>
+
+<body>
+	<div class="wrap js-check-wrap">
+		<div class="row margin-top-20">
+
+			<div class="col-md-6">
+				<form class="js-ajax-form" method="post">
+					<div class="tab-content">
+						<div class="tab-pane active">
+							<div class="form-group">
+								<label for="input-name">剧目名称</label>
+								<div>
+									{$value.name}
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name">剧种分类</label>
+								<div>
+									{$typename}
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>国家和语种</label>
+								<div>
+									{$countrynames}
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>标签</label>
+								<div>
+									{$tagnames}
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>贡献人员</label>
+								<div>
+									{$translatornames}
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>封面图</label>
+								<div class="input_selector_div">
+									<div class="input_selector-preview" style="background-image:url('{$value.cover_img}')"></div>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>剧目描述</label>
+								<div>
+									{$value.description}
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>剧目内容</label>
+								<div>
+									{$value.content}
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>是否要求登陆可见</label>
+								<div>
+									<if condition="$value.is_login eq '0'">否<else/>是</if>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>是否显示</label>
+								<div>
+									<if condition="$value.is_show eq '0'">否<else/>是</if>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>是否置顶</label>
+								<div>
+									<if condition="$value.is_top eq '0'">否<else/>是</if>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name"><span class="form-required">*</span>是否在首页轮播</label>
+								<div>
+									<if condition="$value.is_lunbo eq '0'">否<else/>是</if>
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="input-name">排序</label>
+								<div>
+									{$value.listorder}
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="__STATIC__/js/admin.js"></script>
+</body>
+
+</html>

@@ -28,7 +28,7 @@ class CountryController extends AdminBaseController{
 
         $country = Db::name('country c1')
         	->field('c1.*,c2.name as pname')
-        	->join('country c2','c2.id=c1.pid','left')
+        	->join('country c2','c2.id=c1.parent_id','left')
             ->where($where)
             ->order('c1.listorder ASC,c1.id DESC')
             ->paginate(20);
@@ -45,7 +45,7 @@ class CountryController extends AdminBaseController{
     {
         $where = [];
         isset($search['name'])&&!empty($search['name'])? $where['c1.name'] = ['like',"%$search[name]%"] : '';
-        isset($search['pid'])&&!empty($search['pid'])? $where['c1.pid'] = ['=',"$search[pid]"] : '';
+        isset($search['parent_id'])&&!empty($search['parent_id'])? $where['c1.parent_id'] = ['=',"$search[parent_id]"] : '';
         isset($search['language'])&&!empty($search['language'])? $where['c1.language'] = ['like',"%$search[language]%"] : '';
         $where['c1.is_deleted'] = 0;
         return $where;
@@ -129,6 +129,32 @@ class CountryController extends AdminBaseController{
         }
 		$CountryModel->where(array("id"=>$id))->update(array("is_deleted"=>1));
         $this->success('删除成功');
+    }
+    
+    /**
+     * 弹框选择国家
+     */
+    public function select(CountryModel $CountryModel)
+    {
+        $ids                 = $this->request->param('ids');
+        $selectedIds         = explode(',', $ids);
+
+        $tpl = <<<tpl
+				<tr class='data-item-tr'>
+    				<td>
+        				<input type='checkbox' class='js-check' data-yid='js-check-y' data-xid='js-check-x' name='ids[]'
+               				value='\$id' data-name='\$name' data-language='\$language' \$checked>
+    				</td>
+    				<td>\$id</td>
+    				<td>\$spacer <a href='\$url' target='_blank'>\$name-\$language</a></td>
+    				<td>\$remark</td>
+				</tr>
+tpl;
+
+        $CountryTree = $CountryModel->adminCategoryTableTree($selectedIds, $tpl);
+
+        $this->assign('CountryTree', $CountryTree);
+        return $this->fetch();
     }
 }
 ?>

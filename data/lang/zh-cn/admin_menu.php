@@ -121,6 +121,8 @@ return array (
   'ADMINYW_COUNTRY_INDEX' => '国家语种管理',
   'ADMINYW_PLAY_INDEX' => '剧目管理',
   'ADMINYW_RECORD_INDEX' => '操作记录',
+  'ADMINYW_TAG_INDEX' => '标签管理',
+  'ADMINYW_TRANSLATOR_INDEX' => '贡献人员管理',
   'ADMINYW_TYPE_INDEX' => '剧种分类管理',
   'PORTAL_ADMINARTICLE_ADD' => '添加文章',
   'PORTAL_ADMINARTICLE_ADDPOST' => '添加文章提交',

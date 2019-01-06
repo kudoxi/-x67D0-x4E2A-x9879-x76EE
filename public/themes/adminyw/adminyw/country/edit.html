@@ -5,7 +5,7 @@
 	    <ul class="nav nav-tabs">
 			<li><a href="{:url('adminyw/country/index')}">国家语种列表</a></li>
 			<li><a href="{:url('adminyw/country/add')}">国家语种添加</a></li>
-			<li class="active"><a href="{:url('adminyw/country/edit')}">国家语种编辑</a></li>
+			<li class="active"><a href="{:url('adminyw/country/edit',array('id'=>$value.id))}">国家语种编辑</a></li>
 		</ul>
     <div class="row margin-top-20">
 
@@ -30,7 +30,7 @@
 							<div class="form-group">
 								<label for="input-name">所属国家</label>
 								<div>
-									<select name="pid" class="selectpicker" select_target="{:url('adminyw/select/country')}" select_default="{$value.pid}" data-live-search="true"></select>
+									<select name="parent_id" class="selectpicker" select_target="{:url('adminyw/select/country')}" select_default="{$value.pid}" data-live-search="true"></select>
 								</div>
 							</div>
 

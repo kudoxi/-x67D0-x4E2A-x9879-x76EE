@@ -1,0 +1,80 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <form method="post" class="margin-top-20 well form-inline js-ajax-form"  method="post" action="{:url('translator/select')}">
+    	<input type="text" class="form-control" name="name" style="width: 120px;display: inline-block;vertical-align: bottom;" value="{:input('request.name/s','')}" placeholder="人员名称">
+    	<input type="submit" class="btn btn-primary" value="搜索" />
+    	<a class="btn btn-danger" href="{:url('translator/select')}">清空</a>
+    </form>
+    <table class="table table-hover table-bordered table-list">
+        <thead>
+        <tr>
+            <th width="16">
+                <label>
+                    <input type="checkbox" class="js-check-all" data-direction="x" data-checklist="js-check-x">
+                </label>
+            </th>
+            <th width="50">ID</th>
+            <th>人员名称</th>
+            <th>人员描述</th>
+        </tr>
+        </thead>
+        <tbody>
+        	<foreach name="tranlist" item="vo">
+                <tr>
+                    <td>
+                        <php>$checked = in_array($vo['id'],$selectedIds)?'checked':'';</php>
+                        <input type="checkbox" class="js-check" data-yid="js-check-y" data-xid="js-check-x" name="ids[]"
+                               value="{$vo.id}" data-name="{$vo.name}" data-desc="{$vo.description}" {$checked}>
+                    </td>
+                    <td>{$vo.id}</td>
+                    <td>{$vo.name}</td>
+                    <td>{$vo.description}</td>
+                </tr>
+            </foreach>
+        </tbody>
+    </table>
+</div>
+<script src="__STATIC__/js/admin.js"></script>
+<script>
+    $('.data-item-tr').click(function (e) {
+
+        console.log(e);
+        var $this = $(this);
+        if ($(e.target).is('input')) {
+            return;
+        }
+
+        var $input = $this.find('input');
+        if ($input.is(':checked')) {
+            $input.prop('checked', false);
+        } else {
+            $input.prop('checked', true);
+        }
+    });
+
+    function confirm() {
+        var selectedTransId   = [];
+        var selectedTransName = [];
+        var selectedTrans     = [];
+        $('.js-check:checked').each(function () {
+            var $this = $(this);
+            selectedTransId.push($this.val());
+            selectedTransName.push($this.data('name'));
+
+            selectedTrans.push({
+                id: $this.val(),
+                name: $this.data('name')
+            });
+        });
+
+        return {
+            selectedTrans: selectedTrans,
+            selectedTransId: selectedTransId,
+            selectedTransName: selectedTransName
+        };
+    }
+</script>
+</body>
+</html>
