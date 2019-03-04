@@ -15,7 +15,7 @@ class JiluModel extends Model
         'yw_tag' => '标签',
         'yw_translator'=>'翻译人员',
         'yw_f_user'=>'前台用户',
-        'yw_comment'=>'评论',
+        'yw_f_comment'=>'评论',
         'yw_ask_video'=>'求片',
         'yw_click_record'=>'点击量记录',
         
